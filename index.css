@@ -1,0 +1,35 @@
+
+* {
+    /* outline: solid red 1px; */
+}
+
+body div {
+    flex-direction: column;
+    justify-items: space-between;
+}
+
+nav {
+    border-bottom: solid purple 1px;
+}
+nav div {
+    flex-direction: row;
+    
+}
+
+#fileView {
+    margin: 25px;
+}
+#fileView .container .row {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 2%;
+    margin: 2%;
+    outline: solid black 1px;
+    flex-direction: row;
+}
+#fileView .container .row div:first-child {
+    border-right: solid green 1px;
+}
+#footer {
+    border-top: solid blue 1px;
+}

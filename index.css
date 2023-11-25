@@ -3,21 +3,21 @@
     /* outline: solid red 1px; */
 }
 
-body div {
-    flex-direction: column;
-    justify-items: space-between;
+body {
+    background-color: rgb(230, 219, 243);
 }
 
 nav {
     border-bottom: solid purple 1px;
+    margin-top: 5px;
 }
 nav div {
     flex-direction: row;
-    
 }
 
 #fileView {
     margin: 25px;
+    height: 100;
 }
 #fileView .container .row {
     max-width: 100%;
@@ -25,11 +25,30 @@ nav div {
     padding: 2%;
     margin: 2%;
     outline: solid black 1px;
+    border-radius: 5px;
     flex-direction: row;
 }
 #fileView .container .row div:first-child {
-    border-right: solid green 1px;
+    border-right: solid rgb(128, 0, 0) 1px;
 }
+
+
 #footer {
+    display: flex;
     border-top: solid blue 1px;
+    padding-top: 10px;
+    justify-content: center;
+}
+#footer #waterMark {
+    bottom: 0;
+    position: fixed;
+    margin: 5px;
+    padding: 5px;
+}
+#footerLinks span {
+    border-right: solid black 1px;
+    padding: 1px 5px;
+}
+#footerLinks span:last-child {
+    border-right: 0px;
 }

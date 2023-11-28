@@ -1,10 +1,10 @@
 
-* {
+/* * {
     /* outline: solid red 1px; */
-}
+
 
 body {
-    background-color: rgb(230, 219, 243);
+    background-color: rgb(204, 191, 140);
 }
 
 nav {
@@ -24,12 +24,12 @@ nav div {
     min-width: 100%;
     padding: 2%;
     margin: 2%;
-    outline: solid black 1px;
+    outline: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
     flex-direction: row;
 }
 #fileView .container .row div:first-child {
-    border-right: solid rgb(128, 0, 0) 1px;
+    border-right: solid rgb(188, 131, 24) 2px;
 }
 
 
@@ -40,8 +40,8 @@ nav div {
     justify-content: center;
 }
 #footer #waterMark {
-    bottom: 0;
-    position: fixed;
+    bottom: 0%;
+    position:relative;
     margin: 5px;
     padding: 5px;
 }

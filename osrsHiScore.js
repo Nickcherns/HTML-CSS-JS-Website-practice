@@ -57,9 +57,11 @@ let playerArray = {
 
 }
 
+let player = "HuffingSalts";
+
 async function logPlayer(player) {
     try {
-        let response = await fetch("https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=" + player);
+        let response = await fetch("http://localhost:3000/osrsApi/" + player);
 
         // throw error on invalid api fetch
         if (!response.ok) {
@@ -88,12 +90,30 @@ async function logPlayer(player) {
 
 // wait for logPlayer to complete before displaying result
 (async () => {
-    let returnedPlayer = await logPlayer("huffingSalts");
-    console.log(returnedPlayer); // Access the updated playerArray here
+    let returnedPlayer = await logPlayer(player);
+    console.log(returnedPlayer["Total Level"]); // Access the updated playerArray here
 
-    let displayText = JSON.stringify(returnedPlayer);
+    let totalLevel = returnedPlayer["Total Level"].toString();
+    let attack = returnedPlayer["Attack"].toString();
+    let defence = returnedPlayer["Defence"].toString();
+    let strength = returnedPlayer["Strength"].toString();
+    let hitpoints = returnedPlayer["Hitpoints"].toString();
+    let ranged = returnedPlayer["Ranged"].toString();
+    let prayer = returnedPlayer["Prayer"].toString();
+    let magic = returnedPlayer["Magic"].toString();
+    let cooking = returnedPlayer["Cooking"].toString();
         
 
-    document.getElementById("apiTest").innerText = displayText;
+    document.getElementById("totalLevel").innerHTML = totalLevel;
+    document.getElementById("attack").innerHTML = attack;
+    document.getElementById("defence").innerHTML = defence;
+    document.getElementById("strength").innerHTML = strength;
+    document.getElementById("hitpoints").innerHTML = hitpoints;
+    document.getElementById("ranged").innerHTML = ranged;
+    document.getElementById("prayer").innerHTML = prayer;
+    document.getElementById("magic").innerHTML = magic;
+    document.getElementById("cooking").innerHTML = cooking;
+    
+    document.getElementById("playerName").innerHTML = player;
 })();
 

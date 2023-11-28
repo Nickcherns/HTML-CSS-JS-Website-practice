@@ -15,21 +15,40 @@ nav div {
     flex-direction: row;
 }
 
+#playerNameContainer {  
+    display: flex;
+    justify-content: center;
+}
+#playerName {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid rgb(152, 100, 10) 2px;
+    width: 30%;
+}
+
+
 #fileView {
     margin: 25px;
-    height: 100;
 }
 #fileView .container .row {
-    max-width: 100%;
     min-width: 100%;
     padding: 2%;
     margin: 2%;
     outline: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
+    flex-wrap: nowrap;
+}
+#skillName {
+    border-right: solid rgb(188, 131, 24) 4px;
+    width: 70%;
+}
+#lvlDisplay {
+    display: flex;
     flex-direction: row;
 }
-#fileView .container .row div:first-child {
-    border-right: solid rgb(188, 131, 24) 2px;
+.skillLevel {
+    padding-left: 5px;
 }
 
 

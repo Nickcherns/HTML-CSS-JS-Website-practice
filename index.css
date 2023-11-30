@@ -39,13 +39,22 @@ nav div {
     border-radius: 5px;
     flex-wrap: nowrap;
 }
+.skillIcon {
+    /* /* height: 30px; */
+    width: auto; 
+    
+}
+.colDivider {
+    
+}
 #skillName {
-    border-right: solid rgb(188, 131, 24) 4px;
+    
     width: 70%;
 }
 #lvlDisplay {
     display: flex;
     flex-direction: row;
+    border-left: solid rgb(188, 131, 24) 4px;
 }
 .skillLevel {
     padding-left: 5px;

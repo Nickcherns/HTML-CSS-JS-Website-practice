@@ -93,15 +93,15 @@ async function logPlayer(player) {
     let returnedPlayer = await logPlayer(player);
     console.log(returnedPlayer["Total Level"]); // Access the updated playerArray here
 
-    let totalLevel = returnedPlayer["Total Level"].toString();
-    let attack = returnedPlayer["Attack"].toString();
-    let defence = returnedPlayer["Defence"].toString();
-    let strength = returnedPlayer["Strength"].toString();
-    let hitpoints = returnedPlayer["Hitpoints"].toString();
-    let ranged = returnedPlayer["Ranged"].toString();
-    let prayer = returnedPlayer["Prayer"].toString();
-    let magic = returnedPlayer["Magic"].toString();
-    let cooking = returnedPlayer["Cooking"].toString();
+    let totalLevel = returnedPlayer["Total Level"].toString().trim();
+    let attack = returnedPlayer["Attack"].toString().trim();
+    let defence = returnedPlayer["Defence"].toString().trim();
+    let strength = returnedPlayer["Strength"].toString().trim();
+    let hitpoints = returnedPlayer["Hitpoints"].toString().trim();
+    let ranged = returnedPlayer["Ranged"].toString().trim();
+    let prayer = returnedPlayer["Prayer"].toString().trim();
+    let magic = returnedPlayer["Magic"].toString().trim();
+    let cooking = returnedPlayer["Cooking"].toString().trim();
         
 
     document.getElementById("totalLevel").innerHTML = totalLevel;

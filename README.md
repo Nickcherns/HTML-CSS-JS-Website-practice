@@ -12,4 +12,6 @@
 This project is built using:
     HTML / CSS / JavaScript  
     Bootstrap
-    OSRS HiScore API : https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=X
+
+
+OSRS HiScore API : https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=X

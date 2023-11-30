@@ -1,6 +1,7 @@
 
-/* * {
-    /* outline: solid red 1px; */
+* {
+    outline: solid red 1px;
+}
 
 
 body {
@@ -32,32 +33,30 @@ nav div {
     margin: 25px;
 }
 #fileView .container .row {
+    display: flex;
     min-width: 100%;
     padding: 2%;
     margin: 2%;
     outline: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
     flex-wrap: nowrap;
+    justify-items: space-between;
 }
 .skillIcon {
-    /* /* height: 30px; */
     width: auto; 
-    
 }
-.colDivider {
-    
+.skillBox {
+    width: 200px;
 }
 #skillName {
-    
-    width: 70%;
+    width: 50%;
 }
 #lvlDisplay {
     display: flex;
-    flex-direction: row;
-    border-left: solid rgb(188, 131, 24) 4px;
+    justify-content: start;
+    border-left: solid rgb(188, 131, 24) 2px;
 }
 .skillLevel {
-    padding-left: 5px;
 }
 
 

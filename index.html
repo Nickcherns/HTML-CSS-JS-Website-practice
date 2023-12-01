@@ -22,7 +22,7 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Clan +</a>
                 </li>
                 <!-- Index Button -->
                 <li class="nav-item">
@@ -35,15 +35,24 @@
                     </button>
                 </li>
               </ul>
-              <span class="navbar-text">
-                Navbar text with an inline element
-              </span>
+              <!-- settings / logout -->
+              <input class="navbar-text" 
+                type="button"
+                value="settings">
+              <input class="navbar-text"
+                type="button"
+                value="Log Out">
             </div>
           </div>
         </nav>
         <!-- END navBar-->
 
-       
+        <div id="searchBar">
+          <input id="searchInput" type="text">
+          <input onclick="" value="Search" type="button" id="searchButton">
+        </div>
+
+        <!-- name display -->
         <div id="playerNameContainer">
           <span id="playerName"></span>
         </div>
@@ -57,13 +66,15 @@
               </div>
               <div id="lvlDisplay">
                 <img class="skillIcon" src="skill-Icons/Stats_icon.webp">
-                <div id="totalLevel" class="skillLevel"width="10px" height="30px" ></div>
+                <div id="totalLevel" class="skillLevel" width="10px" height="30px" ></div>
               </div>
             </div>
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Attack</div>
+              <div class="skillBox">
+                <div id="skillName">Attack</div>
+              </div>
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Attack_icon_(detail).webp">
                 <div id="attack" class="skillLevel"></div>
@@ -72,7 +83,9 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Defence</div>
+              <div class="skillBox">
+                <div id="skillName">Defence</div>
+              </div>
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Defence_icon_(detail).webp">
                 <div id="defence" class="skillLevel"></div>
@@ -81,7 +94,9 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Strength</div>
+              <div class="skillBox">
+                <div id="skillName">Strength</div>
+              </div>              
               <div id="lvlDisplay">
                 <img class="skillIcon" height="28" src="skill-Icons/Strength_icon_(detail).webp">
                 <div id="strength" class="skillLevel"></div>
@@ -90,7 +105,9 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Hitpoints</div>
+              <div class="skillBox">
+                <div id="skillName">Hitpoints</div>
+              </div>   
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Hitpoints_icon_(detail).webp">
                 <div id="hitpoints" class="skillLevel"></div>
@@ -99,16 +116,20 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Ranged</div>
+              <div class="skillBox">
+                <div id="skillName">Ranged</div>
+              </div>              
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Ranged_icon_(detail).webp">
-                <div id="ranged"></div>
+                <div id="ranged" class="skillLevel"></div>
               </div>
             </div>
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Prayer</div>              
+              <div class="skillBox">
+                <div id="skillName">Prayer</div>
+              </div>              
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Prayer_icon_(detail).webp">
                 <div id="prayer" class="skillLevel"></div>
@@ -117,7 +138,9 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Magic</div>
+              <div class="skillBox">
+                <div id="skillName">Magic</div>
+              </div>              
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Magic_icon_(detail).webp">
                 <div id="magic" class="skillLevel"></div>
@@ -126,7 +149,9 @@
           </div>
           <div class="container">
             <div class="row">
-              <div id="skillName">Cooking</div>
+              <div class="skillBox">
+                <div id="skillName">Cooking</div>
+              </div>              
               <div id="lvlDisplay">
                 <img class="skillIcon" height="25" src="skill-Icons/Cooking_icon_(detail).webp">
                 <div id="cooking" class="skillLevel"></div>

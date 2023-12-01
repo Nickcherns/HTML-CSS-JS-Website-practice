@@ -1,81 +1,129 @@
 
 * {
-    outline: solid red 1px;
+    /* outline: solid red 1px; */
 }
 
-
+/* body */
 body {
     background-color: rgb(204, 191, 140);
 }
 
+/* Navbar */
 nav {
     border-bottom: solid purple 1px;
     margin-top: 5px;
+    div {
+        flex-direction: row;
+    }
 }
-nav div {
-    flex-direction: row;
+input.navbar-text {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgb(204, 191, 140);
+    
+}
+input.navbar-text:hover {
+    background-color: rgba(28, 3, 255, 0.233);
+    padding: 4px 9px;
+    border: solid gray 1px;
+    color: white;
+    border-radius: 10px;
 }
 
+/* search bar */
+#searchBar {
+    text-align: center;
+    padding: 10px;
+
+
+    #searchInput {
+        border-radius: 5px;
+    }
+    #searchButton {
+        border-radius: 5px;
+    }
+    #searchButton:hover {
+        background-color: rgb(187, 187, 238);
+    }
+}
+
+
+/* player name */
 #playerNameContainer {  
     display: flex;
     justify-content: center;
-}
-#playerName {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid rgb(152, 100, 10) 2px;
-    width: 30%;
+
+    #playerName {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        border-bottom: solid rgb(152, 100, 10) 2px;
+        width: 30%;
+    }
 }
 
 
+/* main view */
 #fileView {
     margin: 25px;
+
+    .container .row {
+        display: flex;
+        min-width: 100%;
+        padding: 2%;
+        margin: 2%;
+        outline: solid rgb(152, 100, 10) 2px;
+        border-radius: 5px;
+        justify-content: space-between;
+    }
 }
-#fileView .container .row {
-    display: flex;
-    min-width: 100%;
-    padding: 2%;
-    margin: 2%;
-    outline: solid rgb(152, 100, 10) 2px;
-    border-radius: 5px;
-    flex-wrap: nowrap;
-    justify-items: space-between;
-}
-.skillIcon {
-    width: auto; 
-}
+
 .skillBox {
     width: 200px;
+
+    #skillName {
+        width: 50%;
+        font-weight: 600;
+    }
 }
-#skillName {
-    width: 50%;
-}
+
 #lvlDisplay {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     border-left: solid rgb(188, 131, 24) 2px;
-}
-.skillLevel {
+    width: 75px;
+
+    .skillIcon {
+        width: auto; 
+    }
+    .skillLevel {
+        font-weight: 600;
+        margin-left: 5px;
+    }
 }
 
-
+/* footer */
 #footer {
     display: flex;
     border-top: solid blue 1px;
     padding-top: 10px;
     justify-content: center;
+
+    #waterMark {
+        bottom: 0%;
+        position:relative;
+        margin: 5px;
+        padding: 5px;
+    }
 }
-#footer #waterMark {
-    bottom: 0%;
-    position:relative;
-    margin: 5px;
-    padding: 5px;
-}
-#footerLinks span {
+
+#footerLinks {
+    span {
     border-right: solid black 1px;
     padding: 1px 5px;
-}
-#footerLinks span:last-child {
-    border-right: 0px;
+    }
+    span:last-child {
+        border-right: 0px;
+    }
 }

@@ -15,3 +15,13 @@ This project is built using:
 
 
 OSRS HiScore API : https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=X
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+
+TODO / POSSIBLE ADJUSTMENTS:
+----------------------------
+    1. osrsHiScore.js
+        a. apiSearch()
+            - could take out variable 'middle-man' for data-to-html code but not sure if its actually beneficial at the moment

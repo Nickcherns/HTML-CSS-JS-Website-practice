@@ -66,9 +66,12 @@ input.navbar-text:hover {
 
 /* main view */
 #fileView {
+    display: flex;
     margin: 25px;
+    /* padding will not be responsive */
+    padding: 0px 100px;
 
-    .container .row {
+    .col .container .row {
         display: flex;
         min-width: 100%;
         padding: 2%;
@@ -76,14 +79,21 @@ input.navbar-text:hover {
         outline: solid rgb(152, 100, 10) 2px;
         border-radius: 5px;
         justify-content: space-between;
+        justify-items: center;
+        align-content: center;
+        height: 41px;
+        min-height: auto;
     }
 }
 
 .skillBox {
-    width: 200px;
+    display: flex;
+    width: 120px;
+    min-width: auto;
+    justify-self: center;
+    align-items: center;
 
     #skillName {
-        width: 50%;
         font-weight: 600;
     }
 }
@@ -100,17 +110,21 @@ input.navbar-text:hover {
     .skillLevel {
         font-weight: 600;
         margin-left: 5px;
+        text-align: center;
     }
 }
 
 /* footer */
 #footer {
     display: flex;
-    border-top: solid blue 1px;
     padding-top: 10px;
     justify-content: center;
 
-    #waterMark {
+    .col {
+        text-align: center;
+    }
+
+    .col #waterMark {
         bottom: 0%;
         position:relative;
         margin: 5px;
@@ -119,10 +133,14 @@ input.navbar-text:hover {
 }
 
 #footerLinks {
+    display: flex;
+    justify-content: center;
+
     span {
-    border-right: solid black 1px;
-    padding: 1px 5px;
+        border-right: solid black 1px;
+        padding: 1px 5px;
     }
+
     span:last-child {
         border-right: 0px;
     }

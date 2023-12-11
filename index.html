@@ -59,272 +59,276 @@
 
         <!-- file view -->
         <div id="fileView" class="text-center" width="100%">
-          <div class="col" width="100%">
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Total Level</div>
-                </div>
-                <div id="lvlDisplay">
-                  <img class="skillIcon" src="skill-Icons/Stats_icon.webp">
-                  <div id="totalLevel" class="skillLevel" width="10px" height="30px" ></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Attack</div>
-                </div>
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Attack_icon_(detail).webp">
-                  <div id="attack" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Defence</div>
-                </div>
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Defence_icon_(detail).webp">
-                  <div id="defence" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Strength</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="28" src="skill-Icons/Strength_icon_(detail).webp">
-                  <div id="strength" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Hitpoints</div>
-                </div>   
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Hitpoints_icon_(detail).webp">
-                  <div id="hitpoints" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Ranged</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Ranged_icon_(detail).webp">
-                  <div id="ranged" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Prayer</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Prayer_icon_(detail).webp">
-                  <div id="prayer" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Magic</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Magic_icon_(detail).webp">
-                  <div id="magic" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Cooking</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="26" src="skill-Icons/Cooking_icon_(detail).webp">
-                  <div id="cooking" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">WoodCutting</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Woodcutting_icon_(detail).webp">
-                  <div id="woodcutting" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Fletching</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="24" src="skill-Icons/Fletching_icon_(detail).webp">
-                  <div id="fletching" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Fishing</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="24" src="skill-Icons/Fishing_icon_(detail).webp">
-                  <div id="fishing" class="skillLevel"></div>
-                </div>
-              </div>
-            </div>
+          <div id="hiScoreNote">
+            <p>NOTE: There are no requirements to be shown on the HiScores other than being ranked in the top 2,000,000 players in a category.</p>
+            <input id="dismissBtn" value="Dismiss" type="button">
           </div>
-
-
-          <div class="col" width="10%">
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Firemaking</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Firemaking_icon_(detail).webp">
-                  <div id="firemaking" class="skillLevel"></div>
+          <div id="skillsWrapper" width="100%">
+            <div class="col" width="100%">
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Total Level</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" src="skill-Icons/Stats_icon.webp">
+                    <div id="totalLevel" class="skillLevel" width="10px" height="30px" ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Attack</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Attack_icon_(detail).webp">
+                    <div id="attack" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Defence</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Defence_icon_(detail).webp">
+                    <div id="defence" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Strength</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="28" src="skill-Icons/Strength_icon_(detail).webp">
+                    <div id="strength" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Hitpoints</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Hitpoints_icon_(detail).webp">
+                    <div id="hitpoints" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Ranged</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Ranged_icon_(detail).webp">
+                    <div id="ranged" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Prayer</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Prayer_icon_(detail).webp">
+                    <div id="prayer" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Magic</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Magic_icon_(detail).webp">
+                    <div id="magic" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Cooking</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="26" src="skill-Icons/Cooking_icon_(detail).webp">
+                    <div id="cooking" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">WoodCutting</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Woodcutting_icon_(detail).webp">
+                    <div id="woodcutting" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Fletching</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="24" src="skill-Icons/Fletching_icon_(detail).webp">
+                    <div id="fletching" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Fishing</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="24" src="skill-Icons/Fishing_icon_(detail).webp">
+                    <div id="fishing" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Crafting</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="24" src="skill-Icons/Crafting_icon_(detail).webp">
-                  <div id="crafting" class="skillLevel"></div>
+            <div class="col" width="10%">
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Firemaking</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Firemaking_icon_(detail).webp">
+                    <div id="firemaking" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Smithing</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="23" src="skill-Icons/Smithing_icon_(detail).webp">
-                  <div id="smithing" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Crafting</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="24" src="skill-Icons/Crafting_icon_(detail).webp">
+                    <div id="crafting" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Mining</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="24" src="skill-Icons/Mining_icon_(detail).webp">
-                  <div id="mining" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Smithing</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="23" src="skill-Icons/Smithing_icon_(detail).webp">
+                    <div id="smithing" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Herblore</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="20" src="skill-Icons/Herblore_icon_(detail).webp">
-                  <div id="herblore" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Mining</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="24" src="skill-Icons/Mining_icon_(detail).webp">
+                    <div id="mining" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Agility</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Agility_icon_(detail).webp">
-                  <div id="agility" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Herblore</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="20" src="skill-Icons/Herblore_icon_(detail).webp">
+                    <div id="herblore" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Theiving</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="15" src="skill-Icons/Thieving_icon_(detail).webp">
-                  <div id="theiving" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Agility</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Agility_icon_(detail).webp">
+                    <div id="agility" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Slayer</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Slayer_icon_(detail).webp">
-                  <div id="slayer" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Theiving</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="15" src="skill-Icons/Thieving_icon_(detail).webp">
+                    <div id="theiving" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Farming</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Farming_icon_(detail).webp">
-                  <div id="farming" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Slayer</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Slayer_icon_(detail).webp">
+                    <div id="slayer" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Runecrafting</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Runecraft_icon_(detail).webp">
-                  <div id="runecrafting" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Farming</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Farming_icon_(detail).webp">
+                    <div id="farming" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Hunter</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Hunter_icon_(detail).webp">
-                  <div id="hunter" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Runecrafting</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Runecraft_icon_(detail).webp">
+                    <div id="runecrafting" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="skillBox">
-                  <div id="skillName">Construction</div>
-                </div>              
-                <div id="lvlDisplay">
-                  <img class="skillIcon" height="25" src="skill-Icons/Construction_icon_(detail).webp">
-                  <div id="construction" class="skillLevel"></div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Hunter</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Hunter_icon_(detail).webp">
+                    <div id="hunter" class="skillLevel"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="skillBox">
+                    <div id="skillName">Construction</div>
+                  </div>
+                  <div id="lvlDisplay">
+                    <img class="skillIcon" height="25" src="skill-Icons/Construction_icon_(detail).webp">
+                    <div id="construction" class="skillLevel"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -348,6 +352,7 @@
 
 
     <script src="osrsHiScore.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

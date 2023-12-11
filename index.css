@@ -67,9 +67,14 @@ input.navbar-text:hover {
 /* main view */
 #fileView {
     display: flex;
+    flex-direction: column;
     margin: 25px;
     /* padding will not be responsive */
     padding: 0px 100px;
+
+    #skillsWrapper {
+        display: flex;
+    }
 
     .col .container .row {
         display: flex;
@@ -84,6 +89,13 @@ input.navbar-text:hover {
         height: 41px;
         min-height: auto;
     }
+}
+
+#hiScoreNote {
+    border: solid rgb(152, 100, 10) 2px;
+    border-radius: 5px;
+    font-size: 14px;
+
 }
 
 .skillBox {

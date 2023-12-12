@@ -12,7 +12,8 @@ body {
 nav {
     border-bottom: solid purple 1px;
     margin-top: 5px;
-    div {
+    
+    & div {
         flex-direction: row;
     }
 }
@@ -36,14 +37,16 @@ input.navbar-text:hover {
     text-align: center;
     padding: 10px;
 
+    & #searchInput {
+        border-radius: 5px;
+        padding-left: 5px;
+    }
 
-    #searchInput {
+    & #searchButton {
         border-radius: 5px;
     }
-    #searchButton {
-        border-radius: 5px;
-    }
-    #searchButton:hover {
+
+    & #searchButton:hover {
         background-color: rgb(187, 187, 238);
     }
 }
@@ -54,7 +57,7 @@ input.navbar-text:hover {
     display: flex;
     justify-content: center;
 
-    #playerName {
+    & #playerName {
         font-size: 24px;
         display: flex;
         justify-content: center;
@@ -69,16 +72,17 @@ input.navbar-text:hover {
     display: flex;
     flex-direction: column;
     margin: 25px;
-    /* padding will not be responsive */
+    /*!!* PADDING IS NOT RESPONSIVE *!!*/
     padding: 0px 100px;
 
-    #skillsWrapper {
+
+    & #skillsWrapper {
         display: flex;
     }
 
-    .col .container .row {
+    & .col .container .row {
         display: flex;
-        min-width: 100%;
+        min-width: 30%;
         padding: 2%;
         margin: 2%;
         outline: solid rgb(152, 100, 10) 2px;
@@ -87,7 +91,6 @@ input.navbar-text:hover {
         justify-items: center;
         align-content: center;
         height: 41px;
-        min-height: auto;
     }
 }
 
@@ -95,6 +98,34 @@ input.navbar-text:hover {
     border: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
     font-size: 14px;
+    padding: 4px;
+    padding-bottom: 15px;
+    min-width: 20%;
+    max-width: 90%;
+    height: 100%;
+    align-self: center;
+
+    & p {
+        margin: 0;
+        width: 100%;
+        min-width: 10%;
+        padding: 5px;
+    } 
+
+    & #dismissBtn {
+        border: none;
+        background-color: rgba(204, 191, 140, 0);
+        color: rgb(74, 74, 250);
+        font-weight: 500;
+        font-size: 12px;
+        left: 90%;
+        top: 30%;
+        padding: 0;
+        padding-left: 10px;
+    }
+    & #dismissBtn:hover {
+        color: gray;
+    }
 
 }
 
@@ -105,7 +136,7 @@ input.navbar-text:hover {
     justify-self: center;
     align-items: center;
 
-    #skillName {
+    & #skillName {
         font-weight: 600;
     }
 }
@@ -116,10 +147,11 @@ input.navbar-text:hover {
     border-left: solid rgb(188, 131, 24) 2px;
     width: 75px;
 
-    .skillIcon {
+    & .skillIcon {
         width: auto; 
     }
-    .skillLevel {
+
+    & .skillLevel {
         font-weight: 600;
         margin-left: 5px;
         text-align: center;
@@ -132,11 +164,11 @@ input.navbar-text:hover {
     padding-top: 10px;
     justify-content: center;
 
-    .col {
+    & .col {
         text-align: center;
     }
 
-    .col #waterMark {
+    & .col #waterMark {
         bottom: 0%;
         position:relative;
         margin: 5px;
@@ -148,12 +180,12 @@ input.navbar-text:hover {
     display: flex;
     justify-content: center;
 
-    span {
+    & span {
         border-right: solid black 1px;
         padding: 1px 5px;
     }
 
-    span:last-child {
+    & span:last-child {
         border-right: 0px;
     }
 }

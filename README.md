@@ -25,3 +25,4 @@ TODO / POSSIBLE ADJUSTMENTS:
     1. osrsHiScore.js
         a. apiSearch()
             - could take out variable 'middle-man' for data-to-html code but not sure if its actually beneficial at the moment
+    2. responsive webpages

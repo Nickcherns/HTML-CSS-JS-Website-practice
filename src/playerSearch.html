@@ -5,47 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSRS CView</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="/styles/index.css" rel="stylesheet">
+    <link href="/styles/playerSearch.css" rel="stylesheet">
 </head>
 <body>
     <div id="mainPage">
-      <!-- navBar-->
-      <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">OSRS ClanView</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Clan +</a>
-                </li>
-                <!-- Index Button -->
-                <li class="nav-item">
-                  <button type="button" class="btn btn-primary position-relative">
-                      Inbox
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        12
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </button>
-                </li>
-              </ul>
-              <!-- settings / logout -->
-              <input class="navbar-text" 
-                type="button"
-                value="Settings">
-              <input class="navbar-text"
-                type="button"
-                value="Log Out">
-            </div>
+      <nav class="navbar navbar-expand-md mb-2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="playerSearch.html">OSRS ClanViewer</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="playerSearch.html">Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="clanViewer.html">Clan Viewer</a>
+              </li>
+            </ul>
+            <!-- settings / logout -->
+            <input class="navbar-text" 
+              type="button"
+              value="Settings">
+            <input class="navbar-text"
+              type="button"
+              value="Log Out">
           </div>
-        </nav>
-        <!-- END navBar-->
+        </div>
+      </nav>
+      <!-- END navBar-->
 
         <!-- seach bar -->
         <div id="searchBar">
@@ -59,11 +48,16 @@
         </div>
 
         <!-- file view -->
-        <div id="fileView" class="text-center" width="100%">
+        <div id="fileView" class="text-center">
+
           <!-- hiScore note -->
           <div id="hiScoreNote">
-            <p>NOTE: There are no requirements to be shown on the HiScores other than being ranked in the top 2,000,000 players in a category.</p>
-            <input id="dismissBtn" value="Dismiss" type="button">
+            <p> 
+              <b>NOTE:</b> 
+                There are no requirements to be shown on the HiScores other than being ranked in the top 2,000,000 players in a category.
+              <input id="dismissBtn" value="Dismiss" type="button">
+            </p>
+            
           </div>
 
           <!-- skills containers -->
@@ -358,7 +352,7 @@
 
     <!-- scripts -->
     <script src="/scripts/osrsHiScore.js"></script>
-    <script src="/scripts/index.js"></script>
+    <script src="/scripts/playerSearch.js"></script>
 
 </body>
 

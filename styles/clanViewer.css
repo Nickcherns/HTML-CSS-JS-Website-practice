@@ -1,0 +1,32 @@
+* {
+    /* outline: solid red 1px; */
+}
+
+/* body */
+body {
+    background-color: rgb(204, 191, 140);
+}
+
+/* Navbar */
+nav {
+    border-bottom: solid purple 1px;
+    margin-top: 5px;
+    
+    & div {
+        flex-direction: row;
+    }
+}
+input.navbar-text {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgb(204, 191, 140);
+    
+}
+input.navbar-text:hover {
+    background-color: rgba(28, 3, 255, 0.233);
+    padding: 4px 9px;
+    border: solid gray 1px;
+    color: white;
+    border-radius: 10px;
+}

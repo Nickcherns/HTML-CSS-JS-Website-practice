@@ -85,7 +85,7 @@ input.navbar-text:hover {
         min-width: 30%;
         padding: 2%;
         margin: 2%;
-        outline: solid rgb(152, 100, 10) 2px;
+        border: solid rgb(152, 100, 10) 2px;
         border-radius: 5px;
         justify-content: space-between;
         justify-items: center;

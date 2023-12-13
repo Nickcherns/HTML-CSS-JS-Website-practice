@@ -30,3 +30,49 @@ input.navbar-text:hover {
     color: white;
     border-radius: 10px;
 }
+
+#mainPage {
+
+}
+
+
+
+
+
+#addClanMember {
+    justify-content: center;
+    outline: solid rgb(152, 100, 10) 2px;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 25px;
+}
+
+#addClanMemberBtn {
+    display: flex;
+    border: none;
+    background-color: rgba(204, 191, 140, 0);
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+}
+#addClanMemberBtn:hover {
+    background-color: rgb(184, 172, 128);
+}
+
+.plus {
+    display: inline;
+    background-color: green;
+    color: white;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    line-height: 19px;
+    border-radius: 10px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.plus::before {
+    content: "+";
+
+}

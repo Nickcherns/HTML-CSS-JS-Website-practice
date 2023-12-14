@@ -40,21 +40,25 @@
           <!-- END navBar-->
 
         <!-- add player button-->
-        
-        <div class="d-flex justify-content-evenly">
-          <div class="d-flex" id="addClanMember">
-            <button id="addClanMemberBtn">
-              <span class="plus"></span>
-              Add Clan Member
-            </button>
-          </div>
-          <span>total members: 0</span>
+        <div class="d-flex" id="addTotalContainer">
+            <div class="d-flex">
+              <div class="d-flex" id="addClanMember">
+                <button id="addClanMemberBtn">
+                  <span class="plus"></span>
+                  Add Clan Member
+                </button>
+              </div>
+            </div>
+            <!-- total members (total members added) -->
+          <div id="totalMemb"><span>total members: </span></div>
         </div>
         
 
-        <!-- total members (total memebers added) -->
+        <ul id="playerList">
 
-        <!-- new player add bar with create/delete button -->
+        </ul>
+
+        <!-- newly added player bar with create/delete button -->
 
         <!-- player bar with total level -->
             <!-- more info button that extends to show entire player skill list -->
@@ -64,6 +68,6 @@
 
     </div>
 
-    <script src="#"></script>
+    <script src="scripts/clanViewer.js"></script>
 </body>
 </html>

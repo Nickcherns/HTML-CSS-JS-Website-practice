@@ -4,10 +4,29 @@
 
 let player = null;
 
-// search bar onclick 
+// playerSearch search bar onclick 
 document.getElementById("searchButton").onclick = function() {
 
   let searchInput = document.getElementById("searchInput");
+
+  // soft validation check
+  if(searchInput.length  < 1) {
+    alert("Please enter a valid player name...");
+    console.log("Please enter a valid player name...")
+    return;
+  } 
+
+  player = searchInput.value.toLowerCase();
+  console.log(player); // DEBUG: value check
+
+  searchInput.value = "";
+  apiSearch();
+}
+
+// clanViewer playerBar search bar onclick
+document.getElementById("addSpan").onclick = function() {
+
+  let searchInput = document.getElementById("searchBar");
 
   // soft validation check
   if(searchInput.length  < 1) {
@@ -93,13 +112,12 @@ async function logPlayer(player) {
             throw new console.error("Network Response error has occured");
         }
 
-        // split response into lines and take first 5 lines
+        // split response into lines
         let playerStatsText = await response.text();
         let playerStatsArray = playerStatsText.split("\n");
-
+        // 24 lines (skills) to be split 
         for (let i= 0; i < 24; i++) {
             let entry = playerStatsArray[i];
-
             let entryLvl = entry.split(",");
 
             // Update playerArray based on the entryLvl values

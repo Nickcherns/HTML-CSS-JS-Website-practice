@@ -1,5 +1,5 @@
 * {
-    /* outline: solid red 1px; */
+    outline: solid red 1px;
 }
 
 html {
@@ -113,9 +113,8 @@ input.navbar-text:hover {
     height: 24px;
     width: 24px;
     font-size: 24px;
-    line-height: 19px;
+    line-height: 16px;
     border-radius: 10px;
-    margin-right: 8px;
     vertical-align: middle;
 }
 
@@ -126,8 +125,11 @@ input.navbar-text:hover {
 
 #playerList {
     padding: 50px;
+}
 
-    
+.playerBtnContainer {
+    display: flex;
+    align-items: center;
 }
 
 .clanMember {

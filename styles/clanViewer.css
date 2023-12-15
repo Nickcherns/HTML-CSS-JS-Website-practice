@@ -1,5 +1,5 @@
 * {
-    outline: solid red 1px;
+    /* outline: solid red 1px; */
 }
 
 html {
@@ -67,7 +67,7 @@ input.navbar-text:hover {
     font-weight: 400;
 }
 
-.plus {
+#addMemberBtn {
     display: inline;
     background-color: green;
     color: white;
@@ -80,12 +80,61 @@ input.navbar-text:hover {
     vertical-align: middle;
 }
 
-.plus::before {
+#addMemberBtn::before {
     content: "+";
 
+}
+
+.plus {
+    display: inline-block;
+    text-align: center;
+    background-color: green;
+    border: 1px solid white;
+    color: white;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    line-height: 19px;
+    border-radius: 10px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.plus:hover {
+    background-color: darkgreen;
+}
+
+.delete {
+    display: inline-block;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    line-height: 19px;
+    border-radius: 10px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.delete:hover {
+    background-color: darkred;
 }
 
 
 #playerList {
     padding: 50px;
+
+    
 }
+
+.clanMember {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border: solid rgb(152, 100, 10) 2px;
+    border-radius: 5px;
+}
+

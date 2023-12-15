@@ -9,34 +9,45 @@ let mainPage = document.querySelector("#mainPage");
 
 let totalMembers = document.querySelector("#totalMemb");
 let playerList = document.querySelector("#playerList");
-let totalMemberCount = clanMemberCount;
+let addClanMemberBtn = document.querySelector("#addClanMemberBtn")
+// let totalMemberCount = 0;
 
 let clanMember = document.createElement("li");
 let searchBar = document.createElement("input");
 let emptyButton = document.createElement("button");
 let emptyDiv = document.createElement("div");
-let emptySpan = document.createElement("span");
 
-let plusSpan = emptySpan;
-plusSpan.className = "plus";
 
+let btnContainer = emptyDiv;
+let addSpan = document.createElement("span");
+let deleteSpan = document.createElement("span");
+btnContainer.append(addSpan);
+btnContainer.append(deleteSpan);
+
+addSpan.className = "plus";
+deleteSpan.className = "delete";
+btnContainer.className = "playerBtnContainer"
 clanMember.className = "clanMember";
 
-
-let addBtn =  emptyButton.appendChild(plusSpan);
-                
-let deleteBtn = emptyButton;
+addSpan.textContent = "+";
+deleteSpan.textContent = "-";
 
 searchBar.type = "text";
 searchBar.placeholder = "Player Name";
+searchBar.style.borderRadius = "5px";
+searchBar.style.paddingLeft = "5px";
 
 
 
-clanMember.appendChild(addBtn);
+clanMember.append(searchBar);
+clanMember.append(btnContainer);
 
 playerList.appendChild(clanMember);
 
-function createPlayerBar() {
+addClanMemberBtn.onclick = function() {
+    // addPlayerBar
+    // this is connected 
+    // playerList.appendChild(clanMember);
     /*
         - create li with search bar that connects to api
         - will need an add / delete button
@@ -52,6 +63,16 @@ function addClanMember() {
         - hooked up to API 
         - Add to total member count
     */
+}
+
+// pressing enter key acts as 'add' click
+while (searchBar.selected = true) {
+    searchBar.addEventListener('keypress', function(event) {
+        if(event.key === "Enter") {
+            // addSpan.click();
+        }
+    })
+    break;
 }
 
 

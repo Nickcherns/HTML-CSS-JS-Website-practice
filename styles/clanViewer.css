@@ -1,5 +1,5 @@
 * {
-    outline: solid red 1px;
+    /* outline: solid red 1px; */
 }
 
 html {
@@ -138,5 +138,6 @@ input.navbar-text:hover {
     justify-content: space-between;
     border: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 

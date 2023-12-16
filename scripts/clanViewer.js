@@ -3,6 +3,7 @@
 let mainPage = document.querySelector("#mainPage");
 let totalMembers = document.querySelector("#totalMemb");
 let addClanMemberBtn = document.querySelector("#addClanMemberBtn");
+let deleteBtns = document.getElementsByClassName("delete");
 // let totalMemberCount = 0;
 
 addClanMemberBtn.addEventListener('click', addPlayerBar);
@@ -40,8 +41,19 @@ function addPlayerBar() {
     searchBar.style.borderRadius = "5px";
     searchBar.style.paddingLeft = "5px";
 
+    let memberCount = document.getElementById("memberCount");
+    memberCount.innerHTML = deleteBtns.length;
+
     playerList.appendChild(clanMember);  
-    // console.log(deleteBtn.length);
+    totalMembers.append(memberCount);
+
+    for (let i = 0; i < deleteBtns.length; ++i) {
+        deleteBtns[i].addEventListener('click', function() {
+            let div = this.parentElement;
+            let playerBar = div.parentElement;
+            playerBar.style.display = "none"; 
+        })
+    }
 
 }
 
@@ -67,13 +79,7 @@ function addClanMember() {
 
 
 // Click on a close button to hide the current list item
-let deleteBtn = document.getElementsByClassName("delete");
 
-// this does not work  ???
-for (let i=0; i < deleteBtn.length; i++) {
-    deleteBtn[i].onclick = function() {
-        let div = this.parentNode;
-        div.style.display = "none"; 
-        div.style.color = "purple";
-    };
-};
+
+
+

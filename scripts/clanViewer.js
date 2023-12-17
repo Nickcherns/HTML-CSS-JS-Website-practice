@@ -4,7 +4,8 @@ let mainPage = document.querySelector("#mainPage");
 let totalMembers = document.querySelector("#totalMemb");
 let addClanMemberBtn = document.querySelector("#addClanMemberBtn");
 let deleteBtns = document.getElementsByClassName("delete");
-// let totalMemberCount = 0;
+
+let countValue = deleteBtns.length;
 
 addClanMemberBtn.addEventListener('click', addPlayerBar);
 
@@ -41,14 +42,27 @@ function addPlayerBar() {
     searchBar.style.borderRadius = "5px";
     searchBar.style.paddingLeft = "5px";
 
+
     let memberCount = document.getElementById("memberCount");
-    memberCount.innerHTML = deleteBtns.length;
+
+    // need countValue to 'refresh' everytime 
+    //          something is added/deleted
+    
+    memberCount.innerHTML = ++countValue;
+    
+    // console.log(countValue);
 
     playerList.appendChild(clanMember);  
     totalMembers.append(memberCount);
 
     for (let i = 0; i < deleteBtns.length; ++i) {
         deleteBtns[i].addEventListener('click', function() {
+            // need to actually remove the elements 
+            //      rather than hide them
+
+            // apparently this isnt actually an array 
+            //      and splice will never work?
+            deleteBtns
             let div = this.parentElement;
             let playerBar = div.parentElement;
             playerBar.style.display = "none"; 

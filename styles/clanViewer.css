@@ -141,3 +141,38 @@ input.navbar-text:hover {
     margin-bottom: 10px;
 }
 
+.playerBarSkill {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    border: solid rgb(152, 100, 10) 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.accordion {
+    background-color: rgb(204, 191, 140);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(184, 172, 128);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: rgb(184, 172, 128);
+    display: none;
+    overflow: hidden;
+}

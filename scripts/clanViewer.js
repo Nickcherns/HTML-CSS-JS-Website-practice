@@ -59,7 +59,7 @@ function addPlayerBar() {
     }
     memberCount.innerHTML = countValue;
 
-
+    // enter key press acts as click for add/search
     while (searchBar.selected = true) {
         searchBar.addEventListener('keypress', function(event) {
             if(event.key === "Enter") {
@@ -84,66 +84,100 @@ function addClanMember() {
     
         let playerList = document.querySelector("#playerList");
         let playerBar = document.createElement('li');
-        let playerName = document.createElement('span');
-        playerName.innerText = "Test"
+        playerName = "Zezima";
 
         let accordionDiv = document.createElement('div');
         accordionDiv.className = "accordion";
-        let accordionItemDiv = document.createElement('div')
-        accordionItemDiv.className = "accordion-item";
-        let accordionHeader = document.createElement('h2');
-        accordionHeader.className = "accordion-header";
-        let accordionButton = document.createElement('button');
-        accordionButton.className = "accordion-button";
+        
+        let accordionBtn = document.createElement('button');
+        accordionBtn.className = "accordion";
+        accordionBtn.innerHTML = playerName;
+        let panelDiv = document.createElement('div');
+        panelDiv.className = "panel";
+        let panelText = document.createElement('div');
 
-        let accordionText = document.createElement('div');
-        accordionText.className = "accordion-collapse collapse show";
-        accordionText.id = "accordionText";
-        let accordionBody = document.createElement('div');
-        accordionBody.className = "accordion-body";
-
-        playerBar.append(accordionDiv);
-            accordionDiv.append(accordionItemDiv);
-                accordionItemDiv.append(accordionHeader);
-                    accordionHeader.append(accordionButton);
-                        accordionButton.append(playerName); 
-                accordionItemDiv.append(accordionText);
-                    accordionText.append(accordionBody);
-
-        accordionButton.dataset.bsTarget = "#accordionText"
-        accordionButton.dataset.bsToggle = "collapse";
+        accordionDiv.append(accordionBtn, panelDiv);
+        panelDiv.append(panelText);
 
 
+        playerBar.appendChild(accordionDiv);
 
-
-        // <div class="accordion" id="accordionPanelsStayOpenExample">
-        // <div class="accordion-item">
-        //   <h2 class="accordion-header">
-        //     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-        //       Accordion Item #1
-        //     </button>
-        //   </h2>
-        //   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-        //     <div class="accordion-body">
-        //       <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        //     </div>
-        //   </div>
-        // </div>
-      
+        
 
         playerBar.className = "clanMember"
         playerList.append(playerBar);
 
+        // accordionBtn.innerHTML = playerName;
+
+        var accordions = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < accordions.length; i++) {
+            accordions[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+        
+            /* Toggle between hiding and showing the active panel */
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+
+        let skillsArray = [
+                    "Total Level",
+                        "Attack",
+                       "Defence", 
+                      "Strength",
+                     "Hitpoints",
+                        "Ranged",
+                        "Prayer",
+                         "Magic",
+                       "Cooking",
+                   "Woodcutting",
+                     "Fletching",
+                       "Fishing",
+                    "Firemaking",
+                      "Crafting",
+                      "Smithing",
+                        "Mining",
+                      "Herblore",
+                       "Agility",
+                      "Theiving",
+                        "Slayer",
+                       "Farming",
+                  "Runecrafting",
+                        "Hunter",
+                  "Construction",
+        ];
+
+
+
+        let playerSkills = new Array(23).fill(skillsArray)
+        for (let i=0; i<playerSkills.length; i++) {
+            let span = document.createElement('span');
+            span.innerHTML = playerSkills[i];    
+            span.className = "playerBarSkill";
+            playerSkills[i] = span;
+            panelText.appendChild(span);
+        }
+
+        console.log(playerSkills);
+        // panelText.append(playerSkills);
+
+
+
+
+
+
+
 
 
 }
-
-// **pressing enter key acts as 'add' click**
-
-
-
-
-
 
 
 

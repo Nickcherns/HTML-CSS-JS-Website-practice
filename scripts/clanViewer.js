@@ -30,12 +30,14 @@ function addPlayerBar() {
 
     // class names
     addSpan.className = "plus";
+    addSpan.id = "plus";
     deleteSpan.className = "delete";
     btnContainer.className = "playerBtnContainer"
     clanMember.className = "clanMember";
 
     // search bar 
     searchBar.className = "searchBar";
+    searchBar.id = "searchBar"
     searchBar.type = "text";
     searchBar.placeholder = "Player Name";
     searchBar.style.borderRadius = "5px";
@@ -70,8 +72,6 @@ function addPlayerBar() {
     }
 
 }
-
-addClanMember();
 
 function addClanMember() {
     /*
@@ -157,10 +157,11 @@ function addClanMember() {
 
 
 
-        let playerSkills = new Array(23).fill(skillsArray)
+        let playerSkills = new Array(skillsArray.length)
         for (let i=0; i<playerSkills.length; i++) {
             let span = document.createElement('span');
-            span.innerHTML = playerSkills[i];    
+            span.innerHTML = skillsArray[i] + ": ";    
+            span.id = skillsArray[i].toLowerCase;
             span.className = "playerBarSkill";
             playerSkills[i] = span;
             panelText.appendChild(span);
@@ -171,7 +172,17 @@ function addClanMember() {
 
 
 
+        // CURRENT ISSUE/SITUATION:
+        /*
+          clanViewerAPI.js is most likely being held up with a null error
+            on trying to an onclick() to a 'nonexistent' element.
+          - a fix may be by using mutation observer in JS
+              - https://www.youtube.com/watch?v=Mi4EF9K87aM
 
+
+                
+
+        */
 
 
 

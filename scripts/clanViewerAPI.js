@@ -2,6 +2,8 @@
 // enter player name and return skill levels and experience
 // OSRS HiScore API: https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player=X
 
+import { addClanMember } from './clanViewer.js';
+
 let player = null;
 
 let skillNames = [ "Total Level",
@@ -59,25 +61,37 @@ let playerArray = {
 }
 
 // clanViewer playerBar search bar on click
-document.getElementById("plus").onclick = function() {
+// eventListener on document check for alternated elements and handles it
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('plus')) {
+    console.log('Plus button clicked');
+    let searchInput = document.getElementById("searchBar");
 
-  let searchInput = document.getElementById("searchBar");
+    // soft validation check
+    if(searchInput.value.length < 1) {
+      alert("Please enter a valid player name...");
+      console.log("Please enter a valid player name...")
+      return;
+    } 
+  
+    player = searchInput.value.toLowerCase();
+    console.log(player); // DEBUG: value check
+  
+    searchInput.value = "";
+    addClanMember;
+    apiClanViewer();
+  }
+});
 
-  document.getEleme
 
-  // soft validation check
-  // if(searchInput.length < 1) {
-  //   alert("Please enter a valid player name...");
-  //   console.log("Please enter a valid player name...")
-  //   return;
-  // } 
 
-  player = searchInput.value.toLowerCase();
-  console.log(player); // DEBUG: value check
+  for (let i = 0; i < plusButtons.length; i++) {
+    plusButtons[i].addEventListener('click', function() {
+      console.log("test");
+      
+    });
+  }
 
-  searchInput.value = "";
-  apiClanViewer();
-}
 
 async function logPlayer(player) {
     try {

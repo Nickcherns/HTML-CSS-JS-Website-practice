@@ -30,7 +30,7 @@ function addPlayerBar() {
 
     // class names
     addSpan.className = "plus";
-    addSpan.id = "plus";
+    addSpan.id = "plusButton";
     deleteSpan.className = "delete";
     btnContainer.className = "playerBtnContainer"
     clanMember.className = "clanMember";
@@ -81,114 +81,81 @@ function addClanMember() {
         - Add to total member count
     */
 
+    let skillsArray = [
+      "Total Level", "Attack",
+          "Defence", "Strength",
+        "Hitpoints", "Ranged",
+            "Prayer", "Magic",
+          "Cooking", "Woodcutting",
+        "Fletching", "Fishing",
+        "Firemaking", "Crafting",
+          "Smithing", "Mining",
+          "Herblore", "Agility",
+          "Theiving", "Slayer",
+          "Farming", "Runecrafting",
+            "Hunter", "Construction",
+    ];
+
+    let playerList = document.querySelector("#playerList");
+    let playerBar = document.createElement('li');
+    playerBar.className = "clanMember"
+
+    let accordionDiv = document.createElement('div');
+    accordionDiv.className = "accordion";
     
-        let playerList = document.querySelector("#playerList");
-        let playerBar = document.createElement('li');
-        playerName = "Zezima";
+    // accordionBtn.innerHTML will hold the player name from searchBar
+    let accordionBtn = document.createElement('button');
+    accordionBtn.className = "accordion";
+    accordionBtn.innerHTML = "";
 
-        let accordionDiv = document.createElement('div');
-        accordionDiv.className = "accordion";
-        
-        let accordionBtn = document.createElement('button');
-        accordionBtn.className = "accordion";
-        accordionBtn.innerHTML = playerName;
-        let panelDiv = document.createElement('div');
-        panelDiv.className = "panel";
-        let panelText = document.createElement('div');
+    let panelDiv = document.createElement('div');
+    let panelText = document.createElement('div');
+    panelDiv.className = "panel";
 
+    playerList.append(playerBar);
+      playerBar.appendChild(accordionDiv);
         accordionDiv.append(accordionBtn, panelDiv);
-        panelDiv.append(panelText);
-
-
-        playerBar.appendChild(accordionDiv);
-
-        
-
-        playerBar.className = "clanMember"
-        playerList.append(playerBar);
-
-        // accordionBtn.innerHTML = playerName;
-
-        var accordions = document.getElementsByClassName("accordion");
-        var i;
-        
-        for (i = 0; i < accordions.length; i++) {
-            accordions[i].addEventListener("click", function() {
-            /* Toggle between adding and removing the "active" class,
-            to highlight the button that controls the panel */
-            this.classList.toggle("active");
-        
-            /* Toggle between hiding and showing the active panel */
-            let panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-              panel.style.display = "none";
-            } else {
-              panel.style.display = "block";
-            }
-          });
+          panelDiv.append(panelText);
+    
+    let accordions = document.getElementsByClassName("accordion");
+    for (let i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+    
+        // panel toggle (hidden / active)
+        let panel = this.nextElementSibling;
+        if (panel) {
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
         }
+      });
+  }
 
-        let skillsArray = [
-                    "Total Level",
-                        "Attack",
-                       "Defence", 
-                      "Strength",
-                     "Hitpoints",
-                        "Ranged",
-                        "Prayer",
-                         "Magic",
-                       "Cooking",
-                   "Woodcutting",
-                     "Fletching",
-                       "Fishing",
-                    "Firemaking",
-                      "Crafting",
-                      "Smithing",
-                        "Mining",
-                      "Herblore",
-                       "Agility",
-                      "Theiving",
-                        "Slayer",
-                       "Farming",
-                  "Runecrafting",
-                        "Hunter",
-                  "Construction",
-        ];
+  
+  // add skills as span to playerBar panel
+  let playerSkills = new Array(skillsArray.length)
+  for (let i=0; i<playerSkills.length; i++) {
+      let span = document.createElement('span');
+      span.innerHTML = skillsArray[i] + ": ";    
+      span.id = skillsArray[i].toLowerCase;
+      span.className = "playerBarSkill";
+      playerSkills[i] = span;
+      panelText.appendChild(span);
+  }
 
-
-
-        let playerSkills = new Array(skillsArray.length)
-        for (let i=0; i<playerSkills.length; i++) {
-            let span = document.createElement('span');
-            span.innerHTML = skillsArray[i] + ": ";    
-            span.id = skillsArray[i].toLowerCase;
-            span.className = "playerBarSkill";
-            playerSkills[i] = span;
-            panelText.appendChild(span);
-        }
-
-        console.log(playerSkills);
-        // panelText.append(playerSkills);
-
-
-
-        // CURRENT ISSUE/SITUATION:
-        /*
-          clanViewerAPI.js is most likely being held up with a null error
-            on trying to an onclick() to a 'nonexistent' element.
-          - a fix may be by using mutation observer in JS
-              - https://www.youtube.com/watch?v=Mi4EF9K87aM
-
-
-                
-
-        */
-
-
-
-
-
+  // CURRENT ISSUE/SITUATION:
+  /*
+    onclick for plus buttons is now connected, 
+      need to finish connecting the API
+  */
 }
 
+// addClanMember();
 
 
+export default addClanMember;

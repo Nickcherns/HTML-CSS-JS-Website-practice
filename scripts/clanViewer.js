@@ -1,12 +1,34 @@
 
+
+// CURRENT ISSUE/SITUATION:
+/*
+    -- API connects need serious review 
+    -- clanMember search will produce multiple playerBars off one container 
+          -- it should convert its container into a playerBar rather than produce one
+
+  PLAYER BAR: 
+    -- playerBar needs styling for better readability
+    -- playerBar needs images for each skill
+    -- playerBar needs a 'more info' type button/tag to show that you can open
+          each player bar for more info
+    -- playerBar has weird 'hover' (bug?): hover may be attached to wrong elements
+    -- playerBar needs a delete button 
+*/
+
+
+
+
+
+
+
 // variable declarations
 let mainPage = document.querySelector("#mainPage");
 let totalMembers = document.querySelector("#totalMemb");
 let addClanMemberBtn = document.querySelector("#addClanMemberBtn");
 
-addClanMemberBtn.addEventListener('click', addPlayerBar);
+addClanMemberBtn.addEventListener('click', addClanMember);
 
-function addPlayerBar() {
+function addClanMember() {
     
     let playerList = document.querySelector("#playerList");
     let clanMember = document.createElement("li");
@@ -73,7 +95,7 @@ function addPlayerBar() {
 
 }
 
-function addClanMember() {
+function addPlayerBar() {
     /*
         - createPlayerBar
         - this will actually search when add or Enter is pressed
@@ -148,14 +170,10 @@ function addClanMember() {
       panelText.appendChild(span);
   }
 
-  // CURRENT ISSUE/SITUATION:
-  /*
-    onclick for plus buttons is now connected, 
-      need to finish connecting the API
-  */
+
 }
 
-// addClanMember();
+// addPlayerBar();
 
 
-export default addClanMember;
+export { addPlayerBar };

@@ -26,3 +26,4 @@ TODO / POSSIBLE ADJUSTMENTS:
         a. apiSearch()
             - could take out variable 'middle-man' for data-to-html code but not sure if its actually beneficial at the moment
     2. responsive webpages
+    3. 'save' feature for saving clan 'sets' or 'blueprints' on     clanViewer page 

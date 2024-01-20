@@ -116,6 +116,7 @@ input.navbar-text:hover {
     line-height: 16px;
     border-radius: 10px;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .delete:hover {
@@ -134,7 +135,6 @@ input.navbar-text:hover {
 
 .clanMember {
     display: flex;
-    padding: 10px;
     justify-content: space-between;
     border: solid rgb(152, 100, 10) 2px;
     border-radius: 5px;
@@ -162,6 +162,18 @@ input.navbar-text:hover {
     border: none;
     outline: none;
     transition: 0.4s;
+}
+div.accordion {
+    padding: 0;
+    margin: 0;
+}
+
+#panelDiv:hover {
+    background-color: rgb(204, 191, 140);
+}
+
+#searchBar {
+    margin: 10px;
 }
 
 /* Add a background color to the button if it is clicked on 

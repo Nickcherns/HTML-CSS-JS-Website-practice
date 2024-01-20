@@ -4,7 +4,7 @@
 
 import { addPlayerBar } from './clanViewer.js';
 
-let player = "Player Name";
+let player = "";
 
 let skillNames = [ "Total Level",
                         "Attack",
@@ -83,21 +83,16 @@ function apiSetup() {
   console.log(player); // DEBUG: value check
 
   searchInput.value = "";
-  addPlayerBar();
-  console.log('addPlayerBar function called');
+  
   apiClanViewer();
-
-  let plusButtons = document.getElementsByClassName('plus');
-
-  for (let i = 0; i < plusButtons.length; i++) {
-    plusButtons[i].addEventListener('click', console.log("test"));
-  }
+  addPlayerBar();
 }
 
 
 
 
 async function logPlayer(player) {
+  console.log("preparing response"); // DEBUG RESPONSE
     try {
         let response = await fetch("http://localhost:3000/osrsApi/" + player);
 
@@ -105,7 +100,6 @@ async function logPlayer(player) {
         if (!response.ok) {
             throw new console.error("Network Response error has occured");
         }
-
         // split response into lines
         let playerStatsText = await response.text();
         let playerStatsArray = playerStatsText.split("\n");
@@ -126,10 +120,16 @@ async function logPlayer(player) {
   }
 
 
+  // wait for logPlayer before display
 function apiClanViewer() {
   (async () => {
     let returnedPlayer = await logPlayer(player);
 
+
+    console.log("program reached apiClanViewer function");
+    let playerName = document.querySelector('.playerName');
+    playerName.innerText = player;
+    
     // array data -> variables
     let totalLevel = returnedPlayer["Total Level"].toString().trim();
     let attack = returnedPlayer["Attack"].toString().trim();

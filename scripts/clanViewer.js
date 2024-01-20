@@ -2,7 +2,10 @@
 
 // CURRENT ISSUE/SITUATION:
 /*
-    -- API connects need serious review 
+    -- API connection need serious review 
+      ** logPlayer (line 94 on clanViewerAPI.js) is a problem, 
+            program isnt reaching it at all for some reason and 
+            getting zero activity back within the function
     -- clanMember search will produce multiple playerBars off one container 
           -- it should convert its container into a playerBar rather than produce one
 
@@ -120,7 +123,10 @@ function addPlayerBar() {
 
     let playerList = document.querySelector("#playerList");
     let playerBar = document.createElement('li');
+    let playerName = document.createElement('span');
     playerBar.className = "clanMember"
+    playerName.className = "playerName";
+    playerName.innerHTML = "Test player name";
 
     let accordionDiv = document.createElement('div');
     accordionDiv.className = "accordion";
@@ -137,6 +143,7 @@ function addPlayerBar() {
     playerList.append(playerBar);
       playerBar.appendChild(accordionDiv);
         accordionDiv.append(accordionBtn, panelDiv);
+        accordionBtn.append(playerName);
           panelDiv.append(panelText);
     
     let accordions = document.getElementsByClassName("accordion");
@@ -173,7 +180,7 @@ function addPlayerBar() {
 
 }
 
-// addPlayerBar();
+addPlayerBar();
 
 
 export { addPlayerBar };

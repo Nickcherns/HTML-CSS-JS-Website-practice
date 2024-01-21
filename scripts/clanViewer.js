@@ -4,8 +4,7 @@
 /*
     -- API connection need serious review 
       ** logPlayer (line 94 on clanViewerAPI.js) is a problem, 
-            program isnt reaching it at all for some reason and 
-            getting zero activity back within the function
+            zero response from function what so ever and dont know why
     -- clanMember search will produce multiple playerBars off one container 
           -- it should convert its container into a playerBar rather than produce one
 
@@ -14,7 +13,6 @@
     -- playerBar needs images for each skill
     -- playerBar needs a 'more info' type button/tag to show that you can open
           each player bar for more info
-    -- playerBar has weird 'hover' (bug?): hover may be attached to wrong elements
     -- playerBar needs a delete button 
 */
 

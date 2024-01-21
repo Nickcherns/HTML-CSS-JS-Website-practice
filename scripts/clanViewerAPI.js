@@ -4,7 +4,7 @@
 
 import { addPlayerBar } from './clanViewer.js';
 
-let player = "";
+let player = "Xorb";
 
 let skillNames = [ "Total Level",
                         "Attack",
@@ -70,7 +70,7 @@ document.addEventListener('click', function(event) {
 
 function apiSetup() {
   console.log('Plus button clicked');
-  let searchInput = document.getElementById("searchBar");
+  let searchInput = document.querySelector("#searchBar");
 
   // soft validation check
   if(searchInput.value.length < 1) {
@@ -79,30 +79,34 @@ function apiSetup() {
     return;
   } 
 
-  player = searchInput.value.toLowerCase();
+  // player = searchInput.value.toLowerCase();
   console.log(player); // DEBUG: value check
 
   searchInput.value = "";
   
   apiClanViewer();
+  console.log("apiClanViewer function processed");
   addPlayerBar();
+  console.log("addPlayerBar function processed");
 }
 
 
 
 
 async function logPlayer(player) {
-  console.log("preparing response"); // DEBUG RESPONSE
     try {
         let response = await fetch("http://localhost:3000/osrsApi/" + player);
+        console.log("preparing response"); // DEBUG RESPONSE
 
         // throw error on invalid api fetch
         if (!response.ok) {
-            throw new console.error("Network Response error has occured");
+            throw new Error("Network Response error has occured");
         }
+
         // split response into lines
         let playerStatsText = await response.text();
         let playerStatsArray = playerStatsText.split("\n");
+
         // 24 lines (skills) to be split 
         for (let i= 0; i < 24; i++) {
             let entry = playerStatsArray[i];
@@ -112,11 +116,11 @@ async function logPlayer(player) {
             let skillLevel = parseInt(entryLvl[1]); // Assuming the skill level is at index 1
             playerArray[skillNames[i]] = skillLevel;
         }
+
         return (playerArray);
     } catch (error) {
         console.error("Error fetching player data: ", error)
     }
-
   }
 
 
@@ -124,7 +128,7 @@ async function logPlayer(player) {
 function apiClanViewer() {
   (async () => {
     let returnedPlayer = await logPlayer(player);
-
+    console.log("logPlayer has been processed");
 
     console.log("program reached apiClanViewer function");
     let playerName = document.querySelector('.playerName');
